@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Hugging Face",
+    "url": "https://huggingface.co",
+    "category": "AI"
+  },
+  {
+    "title": "NextDNS",
+    "url": "https://nextdns.io",
+    "category": "Privacy & Security"
+  },
+  {
+    "title": "SimpleLogin",
+    "url": "https://app.simplelogin.io",
+    "category": "Privacy & Security"
+  },
+  {
+    "title": "Notion",
+    "url": "https://www.notion.so",
+    "category": "Productivity"
+  }
+]
