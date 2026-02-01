@@ -1,5 +1,5 @@
 // ============= CONFIG & STATE =============
-const STORAGE_KEY = "url_hub_links_v1";
+const STORAGE_KEY = "necs_hub_links_v1";
 const STATE = {
   links: [],
   activeCategory: 'All', // 'All' or specific category name
@@ -9,17 +9,19 @@ const STATE = {
 };
 
 const CAT_ICONS = {
-  "Apps & Stores": "📱",
-  "Privacy & Security": "🛡️",
+  // "Apps & Stores": "📱",
+  // "Privacy & Security": "🛡️",
   "AI": "🤖",
-  "Utilities": "🛠️",
+  // "Utilities": "🛠️",
   "Productivity": "⚡",
   "Media": "🎬",
-  "Shopping": "🛍️",
-  "Others": "📦",
-  "Games": "🎮",
+  // "Shopping": "🛍️",
+  // "Others": "📦",
+  "Perchance": "🎲",
+  // "Necs": "🧿",
+  // "Games": "🎮",
   "Social": "💬",
-  "Anime": "🎌",
+  // "Anime": "🎌",
   "Streaming": "📺",
   "All": "🏠"
 };
