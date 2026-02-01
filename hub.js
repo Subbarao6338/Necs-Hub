@@ -1,5 +1,5 @@
 // ============= CONFIG & STATE =============
-const STORAGE_KEY = "necs_hub_links_v1";
+const STORAGE_KEY = "url_hub_links_v1";
 const STATE = {
   links: [],
   activeCategory: 'All', // 'All' or specific category name
@@ -9,19 +9,17 @@ const STATE = {
 };
 
 const CAT_ICONS = {
-  // "Apps & Stores": "📱",
-  // "Privacy & Security": "🛡️",
+  "Apps & Stores": "📱",
+  "Privacy & Security": "🛡️",
   "AI": "🤖",
-  // "Utilities": "🛠️",
+  "Utilities": "🛠️",
   "Productivity": "⚡",
   "Media": "🎬",
-  // "Shopping": "🛍️",
-  // "Others": "📦",
-  "Perchance": "🎲",
-  // "Necs": "🧿",
-  // "Games": "🎮",
+  "Shopping": "🛍️",
+  "Others": "📦",
+  "Games": "🎮",
   "Social": "💬",
-  // "Anime": "🎌",
+  "Anime": "🎌",
   "Streaming": "📺",
   "All": "🏠"
 };
@@ -66,19 +64,29 @@ const Core = {
       // Try fetching the external file first
       let raw = [];
       try {
-        // const res = await fetch('links.json');
         const res = await fetch(`links.json?t=${new Date().getTime()}`);
         if (res.ok) raw = await res.json();
       } catch (fetchErr) {
-        console.warn("Could not fetch links.json (likely file:// protocol restriction). Falling back to embedded.", fetchErr);
-        // Fallback to embedded script tag content if present
-        const dataEl = document.getElementById("data");
-        if (dataEl && dataEl.textContent.trim()) {
-          raw = JSON.parse(dataEl.textContent);
-        }
+        console.warn("Could not fetch links.json", fetchErr);
+        // alert("Failed to fetch links.json: " + fetchErr.message); 
       }
 
-      if (!Array.isArray(raw) || raw.length === 0) return;
+      try {
+        if (!raw || raw.length === 0) {
+          // Fallback to embedded
+          const dataEl = document.getElementById("data");
+          if (dataEl && dataEl.textContent.trim()) {
+            raw = JSON.parse(dataEl.textContent);
+          }
+        }
+      } catch (e) {
+        alert("Error parsing fallback data: " + e.message);
+      }
+
+      if (!Array.isArray(raw) || raw.length === 0) {
+        alert("No links found in links.json or it is invalid JSON.");
+        return;
+      }
 
       STATE.links = raw.map(item => {
         let category = item.category || "Others";
@@ -90,8 +98,10 @@ const Core = {
         };
       });
       this.saveData();
+      alert("Links successfully updated from server!");
     } catch (e) {
       console.error("Migration failed", e);
+      alert("Critical error loading data: " + e.message);
     }
   },
 
@@ -373,6 +383,13 @@ const Tools = {
     };
     reader.readAsText(file);
     input.value = ''; // reset
+  },
+
+  resetData() {
+    if (confirm("This will reset your dashboard to the default list from links.json. Any local changes will be lost. Continue?")) {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
   }
 };
 
@@ -406,4 +423,3 @@ const PageTools = {
 
 // Initial Start
 Core.init();
-
