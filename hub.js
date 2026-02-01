@@ -227,7 +227,7 @@ const UI = {
 
     // Group by Category
     const grouped = {};
-    filtered.forEach(l => {
+    filtered.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase())).forEach(l => {
       (grouped[l.category] ||= []).push(l);
     });
 
