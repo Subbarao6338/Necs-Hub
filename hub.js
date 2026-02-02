@@ -9,20 +9,17 @@ const STATE = {
 };
 
 const CAT_ICONS = {
-  // "Apps & Stores": "📱",
-  // "Privacy & Security": "🛡️",
+  "Privacy & Security": "🛡️",
   "AI": "🤖",
-  // "Utilities": "🛠️",
   "Productivity": "⚡",
   "Media": "🎬",
-  // "Shopping": "🛍️",
-  // "Others": "📦",
   "Perchance": "🎲",
-  // "Necs": "🧿",
-  // "Games": "🎮",
   "Social": "💬",
-  // "Anime": "🎌",
   "Streaming": "📺",
+  "Email": "📧",
+  "Storage": "☁️",
+  "Google": "🔍",
+  "Utilities": "🛠️",
   "All": "🏠"
 };
 

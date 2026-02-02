@@ -18,5 +18,245 @@
     "title": "Notion",
     "url": "https://www.notion.so",
     "category": "Productivity"
+  },
+  {
+    "title": "Stremio Web",
+    "url": "https://web.stremio.com/#/",
+    "category": "Streaming"
+  },
+  {
+    "title": "Gemini",
+    "url": "https://gemini.google.com/",
+    "category": "AI"
+  },
+  {
+    "title": "Telegram Web",
+    "url": "https://web.telegram.org/k/",
+    "category": "Social"
+  },
+  {
+    "title": "Stremio Addons",
+    "url": "https://stremio-addons.net/",
+    "category": "Streaming"
+  },
+  {
+    "title": "Gmail",
+    "url": "https://mail.google.com/",
+    "category": "Email"
+  },
+  {
+    "title": "NextDNS Logs",
+    "url": "https://my.nextdns.io/d893f5/logs",
+    "category": "Privacy & Security"
+  },
+  {
+    "title": "Outlook",
+    "url": "https://outlook.live.com/",
+    "category": "Email"
+  },
+  {
+    "title": "OneDrive",
+    "url": "https://onedrive.live.com/",
+    "category": "Storage"
+  },
+  {
+    "title": "Grok",
+    "url": "https://grok.com/",
+    "category": "AI"
+  },
+  {
+    "title": "ChatGPT",
+    "url": "https://chatgpt.com/",
+    "category": "AI"
+  },
+  {
+    "title": "Notion Mail",
+    "url": "https://mail.notion.so/inbox",
+    "category": "Email"
+  },
+  {
+    "title": "Google Account Dashboard",
+    "url": "https://myaccount.google.com/dashboard",
+    "category": "Google"
+  },
+  {
+    "title": "Google Account",
+    "url": "https://myaccount.google.com/",
+    "category": "Google"
+  },
+  {
+    "title": "Google Docs Videos",
+    "url": "https://docs.google.com/videos/",
+    "category": "Google"
+  },
+  {
+    "title": "Google One",
+    "url": "https://one.google.com/",
+    "category": "Google"
+  },
+  {
+    "title": "Google Photos",
+    "url": "https://photos.google.com/",
+    "category": "Google"
+  },
+  {
+    "title": "YouTube",
+    "url": "https://www.youtube.com/",
+    "category": "Google"
+  },
+  {
+    "title": "Google Drive",
+    "url": "https://drive.google.com/",
+    "category": "Google"
+  },
+  {
+    "title": "Vert.sh",
+    "url": "https://vert.sh/",
+    "category": "Utilities"
+  },
+  {
+    "title": "Yoink",
+    "url": "https://yoink.tools/",
+    "category": "Utilities"
+  },
+  {
+    "title": "Raindrop.io",
+    "url": "https://app.raindrop.io/",
+    "category": "Utilities"
+  },
+  {
+    "title": "GPT-OSS",
+    "url": "https://gpt-oss.com/",
+    "category": "AI"
+  },
+  {
+    "title": "Perplexity AI",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI"
+  },
+  {
+    "title": "Mega",
+    "url": "https://mega.nz",
+    "category": "Storage"
+  },
+  {
+    "title": "Unlim Cloud Login",
+    "url": "https://unlim-cloud.web.app/login",
+    "category": "Storage"
+  },
+  {
+    "title": "Proton Account Mail Dashboard",
+    "url": "https://account.proton.me/u/0/mail/dashboard",
+    "category": "Email"
+  },
+  {
+    "title": "SimpleLogin Dashboard",
+    "url": "https://app.simplelogin.io/dashboard",
+    "category": "Email"
+  },
+  {
+    "title": "Facebook",
+    "url": "http://www.facebook.com",
+    "category": "Social"
+  },
+  {
+    "title": "Pinterest",
+    "url": "https://in.pinterest.com",
+    "category": "Social"
+  },
+  {
+    "title": "Instagram",
+    "url": "https://www.instagram.com",
+    "category": "Social"
+  },
+  {
+    "title": "Proton Mail Inbox",
+    "url": "https://mail.proton.me/u/0/inbox",
+    "category": "Email"
+  },
+  {
+    "title": "Feedly",
+    "url": "https://feedly.com/",
+    "category": "Social"
+  },
+  {
+    "title": "AI Plot Generator - Perchance",
+    "url": "https://perchance.org/ai-plot-generator",
+    "category": "Perchance"
+  },
+  {
+    "title": "Lunatic's Full Extras No Limit AI - Perchance",
+    "url": "https://perchance.org/lunatics-full-extras-no-limit-ai-the-have-fun-gen-full-with-extras",
+    "category": "Perchance"
+  },
+  {
+    "title": "X (Twitter)",
+    "url": "https://www.twitter.com",
+    "category": "Social"
+  },
+  {
+    "title": "Perchance.org (Home)",
+    "url": "https://perchance.org",
+    "category": "Perchance"
+  },
+  {
+    "title": "NECS Image Generator",
+    "url": "https://perchance.org/necs-img",
+    "category": "Perchance"
+  },
+  {
+    "title": "NECS Story Generator",
+    "url": "https://perchance.org/necs-story",
+    "category": "Perchance"
+  },
+  {
+    "title": "NECS Text-to-Image",
+    "url": "https://perchance.org/necs-t2i",
+    "category": "Perchance"
+  },
+  {
+    "title": "AI Art Generator Advanced",
+    "url": "https://perchance.org/ai-art-generator-advanced",
+    "category": "Perchance"
+  },
+  {
+    "title": "AI Text Rewriter",
+    "url": "https://perchance.org/ai-text-rewriter",
+    "category": "Perchance"
+  },
+  {
+    "title": "NECS AI Story Generator",
+    "url": "https://perchance.org/ai-story-generator",
+    "category": "Perchance"
+  },
+  {
+    "title": "AI Text Generator",
+    "url": "https://perchance.org/ai-text-generator",
+    "category": "Perchance"
+  },
+  {
+    "title": "AI Character Chat",
+    "url": "https://perchance.org/ai-chat",
+    "category": "Perchance"
+  },
+  {
+    "title": "Ultimate AI Image Generator",
+    "url": "https://perchance.org/5yf90s8rdo",
+    "category": "Perchance"
+  },
+  {
+    "title": "Image Generator Professional",
+    "url": "https://perchance.org/image-generator-professional",
+    "category": "Perchance"
+  },
+  {
+    "title": "Necs Notion",
+    "url": "https://necs6338.notion.site/Life-Hub-1ea5ddc7f5d280359aa3f2cba4261a6f",
+    "category": "Productivity"
+  },
+  {
+    "title": "Bitwarden",
+    "url": "https://vault.bitwarden.com/",
+    "category": "Privacy & Security"
   }
 ]
