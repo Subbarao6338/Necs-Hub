@@ -20,6 +20,8 @@ const CAT_ICONS = {
   "Storage": "☁️",
   "Google": "🔍",
   "Utilities": "🛠️",
+  "Forums": "🏛️",
+  "Others": "📦",
   "All": "🏠"
 };
 
