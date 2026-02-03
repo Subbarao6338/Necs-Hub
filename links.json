@@ -2,22 +2,14 @@
   {
     "title": "Hugging Face",
     "url": "https://huggingface.co",
-    "category": "AI"
-  },
-  {
-    "title": "NextDNS",
-    "url": "https://nextdns.io",
-    "category": "Privacy & Security"
-  },
-  {
-    "title": "SimpleLogin",
-    "url": "https://app.simplelogin.io",
-    "category": "Privacy & Security"
+    "category": "AI",
+    "icon": ""
   },
   {
     "title": "Notion",
     "url": "https://www.notion.so",
-    "category": "Productivity"
+    "category": "Productivity",
+    "icon": ""
   },
   {
     "title": "Stremio Web",
@@ -27,7 +19,8 @@
   {
     "title": "Gemini",
     "url": "https://gemini.google.com/",
-    "category": "AI"
+    "category": "AI",
+    "icon": ""
   },
   {
     "title": "Telegram Web",
@@ -85,7 +78,7 @@
     "category": "Google"
   },
   {
-    "title": "Google Docs Videos",
+    "title": "Google Videos",
     "url": "https://docs.google.com/videos/",
     "category": "Google"
   },
@@ -97,17 +90,17 @@
   {
     "title": "Google Photos",
     "url": "https://photos.google.com/",
-    "category": "Google"
+    "category": "Storage"
   },
   {
     "title": "YouTube",
     "url": "https://www.youtube.com/",
-    "category": "Google"
+    "category": "Streaming"
   },
   {
     "title": "Google Drive",
     "url": "https://drive.google.com/",
-    "category": "Google"
+    "category": "Storage"
   },
   {
     "title": "Vert.sh",
@@ -125,11 +118,6 @@
     "category": "Utilities"
   },
   {
-    "title": "GPT-OSS",
-    "url": "https://gpt-oss.com/",
-    "category": "AI"
-  },
-  {
     "title": "Perplexity AI",
     "url": "https://www.perplexity.ai/",
     "category": "AI"
@@ -143,11 +131,6 @@
     "title": "Unlim Cloud Login",
     "url": "https://unlim-cloud.web.app/login",
     "category": "Storage"
-  },
-  {
-    "title": "Proton Account Mail Dashboard",
-    "url": "https://account.proton.me/u/0/mail/dashboard",
-    "category": "Email"
   },
   {
     "title": "SimpleLogin Dashboard",
@@ -170,8 +153,8 @@
     "category": "Social"
   },
   {
-    "title": "Proton Mail Inbox",
-    "url": "https://mail.proton.me/u/0/inbox",
+    "title": "Proton Mail",
+    "url": "https://mail.proton.me/",
     "category": "Email"
   },
   {
@@ -260,104 +243,104 @@
     "category": "Privacy & Security"
   },
   {
-    "title": "Threads Profile @necs258",
+    "title": "Threads",
     "url": "https://www.threads.com/@necs258",
     "category": "Social"
   },
   {
-    "title": "DesiFakes Main Site",
+    "title": "DesiFakes.com",
     "url": "https://desifakes.com/",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
     "title": "DesiFakes Watched Threads",
     "url": "https://desifakes.com/watched/threads",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
-    "title": "DesiFakes Account Alerts",
+    "title": "DesiFakes Alerts",
     "url": "https://desifakes.com/account/alerts",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
     "title": "DesiFakes Thematic and Special Contests",
     "url": "https://desifakes.com/forums/thematic-and-special-contests.69/",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
     "title": "DesiFakes Story Writing Contest",
     "url": "https://desifakes.com/forums/desifakes-story-writing-contest.79/",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
-    "title": "DesiFakes Reels Celebrity Fakes Instagram YouTube Locked",
+    "title": "DesiFakes Social Media Celebs",
     "url": "https://desifakes.com/forums/reels-celebrity-fakes-instagram-youtube-locked.62/",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
-    "title": "DesiFakes Actress Sex Stories Mems Roleplay",
+    "title": "DesiFakes Stories",
     "url": "https://desifakes.com/forums/actress-sex-stories-mems-roleplay.49/",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
-    "title": "DesiFakes Alternate Domain",
+    "title": "DesiFakes.net",
     "url": "https://desifakes.net/",
-    "category": "Forums"
+    "category": "Desifakes"
   },
   {
-    "title": "Xossipy Main Forum",
+    "title": "Xossipy",
     "url": "https://xossipy.com/forum.php",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
-    "title": "Xossipy User Control Panel Subscriptions",
+    "title": "Xossipy Subscriptions",
     "url": "https://xossipy.com/usercp.php?action=subscriptions",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
     "title": "Xossipy Telugu Stories",
     "url": "https://xossipy.com/forum-15.html",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
     "title": "Xossipy Telugu Incest Stories",
     "url": "https://xossipy.com/forum-49.html",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
     "title": "Xossipy English Stories",
     "url": "https://xossipy.com/forum-17.html",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
     "title": "Xossipy English Incest Stories",
     "url": "https://xossipy.com/forum-69.html",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
-    "title": "MoreDesi Main Site",
+    "title": "MoreDesi",
     "url": "https://moredesi.com/",
-    "category": "Forums"
+    "category": "MoreDesi"
   },
   {
     "title": "MoreDesi Actress Boothu Kathalu",
     "url": "https://moredesi.com/category/actress-boothu-kathalu/",
-    "category": "Forums"
+    "category": "MoreDesi"
   },
   {
     "title": "MoreDesi Actress Sex Stories English",
     "url": "https://moredesi.com/category/actress-sex-stories-english/",
-    "category": "Forums"
+    "category": "MoreDesi"
   },
   {
-    "title": "Kama Kadhaikal WordPress",
+    "title": "Kama Kadhaikal",
     "url": "https://kamakadhaikal.wordpress.com/",
     "category": "Forums"
   },
   {
     "title": "Literotica Celebrity Stories",
     "url": "https://www.literotica.com/c/celebrity-stories",
-    "category": "Forums"
+    "category": "Literotica"
   },
   {
     "title": "SexBaba",
@@ -367,7 +350,7 @@
   {
     "title": "Xossip1",
     "url": "https://xossip1.com/",
-    "category": "Forums"
+    "category": "Xossip"
   },
   {
     "title": "CelebritySex.co",
