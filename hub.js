@@ -21,6 +21,10 @@ const CAT_ICONS = {
   "Google": "🔍",
   "Utilities": "🛠️",
   "Forums": "🏛️",
+  "Desifakes": "🎭",
+  "Xossip": "🗣️",
+  "MoreDesi": "🌶️",
+  "Literotica": "📖",
   "Others": "📦",
   "All": "🏠"
 };
@@ -451,3 +455,4 @@ const PageTools = {
 
 // Initial Start
 Core.init();
+
