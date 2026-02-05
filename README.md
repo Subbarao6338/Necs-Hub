@@ -41,9 +41,10 @@ Modify the `links.json` file with the following structure:
   {
     "title": "Example Title",
     "url": "https://example.com",
-    "urls": ["multiple urls separated by comma],
+    "urls": ["multiple urls separated by comma"],
     "category": "Utilities"
   }
 ]
 ```
+
 
