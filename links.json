@@ -42,6 +42,7 @@
   {
     "title": "Gmail",
     "url": "https://mail.google.com/",
+    "optional_icon": "https://mail.google.com/favicon.ico",
     "urls": [
       "https://mail.google.com/",
       "https://mail.google.co.in/",
@@ -480,5 +481,3 @@
     "category": "Media"
   }
 ]
-
-
