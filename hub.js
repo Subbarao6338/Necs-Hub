@@ -9,24 +9,23 @@ const STATE = {
 };
 
 const CAT_ICONS = {
-  "Privacy & Security": "🛡️",
-  "AI": "🤖",
-  "Productivity": "⚡",
-  "Media": "🎬",
+  "All": "🏠",
+  "Privacy & Security": "🔐",
+  "AI": "🧠",
+  "Productivity": "🚀",
+  "Utilities": "⚙️",
+  "Media": "🎥",
+  "Streaming": "📺",
   "Perchance": "🎲",
   "Social": "💬",
-  "Streaming": "📺",
-  "Email": "📧",
+  "Forums": "🧵",
+  "Email": "✉️",
   "Storage": "☁️",
-  "Google": "🔍",
-  "Utilities": "🛠️",
-  "Forums": "🏛️",
+  "Google": "🟢",
   "Desifakes": "🎭",
   "Xossip": "🗣️",
   "MoreDesi": "🌶️",
-  "Literotica": "📖",
-  "Others": "📦",
-  "All": "🏠"
+  "Literotica": "📚",
 };
 
 const Utils = {
@@ -670,3 +669,4 @@ const PageTools = {
 
 // Initial Start
 Core.init();
+
