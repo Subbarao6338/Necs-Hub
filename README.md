@@ -2,7 +2,7 @@
 
 ![NECS Hub Icon](./perchance.png)
 
-A personal, offline-first dashboard to organize and access your favorite tools, websites, and resources, specifically focused on NECS tools and related categories.
+A personal dashboard to organize and access your favorite websites.
 
 ## Features
 
@@ -10,7 +10,7 @@ A personal, offline-first dashboard to organize and access your favorite tools, 
 - **Search**: Real-time filtering by title or URL.
 - **Local Storage**: Your changes (adding, editing, deleting links) are saved locally in your browser (`necs_hub_links_v1`), so they persist across sessions.
 - **Dark/Light Mode**: Toggle between themes based on your preference.
-- **Responsive Design**: Works on desktop and mobile devices with a collapsible sidebar.
+- **Responsive Design**: Works on desktop and mobile devices.
 - **Import/Export**: Backup your links to a JSON file and restore them later.
 - **Privacy Focused**: No external tracking; everything runs locally.
 
@@ -47,6 +47,7 @@ Modify the `links.json` file with the following structure:
   }
 ]
 ```
+
 
 
 
