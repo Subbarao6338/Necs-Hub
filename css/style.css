@@ -970,6 +970,9 @@ input.pill:focus {
   .tab-bar {
     display: none !important;
   }
+  .search-dismiss-overlay {
+    display: none !important;
+  }
 
   .app-layout {
     flex-direction: row;
