@@ -43,19 +43,6 @@ const TabBar = memo(({ currentTab, setTab, onAddClick, onSettingsClick, onSearch
           <span className="material-icons-outlined" aria-hidden="true">settings</span>
           <span className="tab-name">Settings</span>
         </button>
-
-        <button
-          id="tab-manual-stats"
-          className={`tab-item ${currentTab === 'manual_stats' ? 'active' : ''}`}
-          onClick={() => handleTabClick('manual_stats')}
-          title="Analytics"
-          role="tab"
-          aria-selected={currentTab === 'manual_stats'}
-          aria-controls="content"
-        >
-          <span className="material-icons-outlined" aria-hidden="true">insights</span>
-          <span className="tab-name">Analytics</span>
-        </button>
       </div>
     </nav>
   );

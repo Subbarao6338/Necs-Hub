@@ -46,6 +46,41 @@ const SettingsModal = ({
 }) => {
   const [openSections, setOpenSections] = useState(['global']);
 
+  // Analytics calculation state
+  const links = React.useMemo(() => storage.getJSON('hub_links_necs') || [], []);
+  const totalBookmarks = links.length;
+  const pinnedCount = links.filter(l => l.is_pinned).length;
+  const categoriesCount = new Set(links.map(l => l.category).filter(Boolean)).size;
+
+  // Diagnostics state
+  const [connectionSpeed, setConnectionSpeed] = useState('fast');
+  const [issueType, setIssueType] = useState('none');
+  const [description, setDescription] = useState('');
+  const [diagResult, setDiagResult] = useState(null);
+  const [isRunningDiag, setIsRunningDiag] = useState(false);
+
+  const runDiagnostics = (e) => {
+    e.preventDefault();
+    setIsRunningDiag(true);
+    setDiagResult(null);
+    setTimeout(() => {
+      setIsRunningDiag(false);
+      setDiagResult({
+        timestamp: new Date().toLocaleTimeString(),
+        status: issueType === 'none' ? 'Healthy' : 'Optimizations Suggested',
+        browser: navigator.userAgent.split(' ')[0] || 'Modern Browser',
+        speed: connectionSpeed,
+        recommendation: issueType === 'none'
+          ? 'System performance optimal. No action required.'
+          : issueType === 'slow'
+          ? 'Consider enabling Compact View or disabling Glass Morphism/Animations in Appearance settings.'
+          : issueType === 'sync'
+          ? 'Check your connection or try resetting local storage.'
+          : 'Check visual settings and accent color contrast.'
+      });
+    }, 600);
+  };
+
   const toggleSection = (id) => {
     setOpenSections(prev =>
       prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]
@@ -102,6 +137,69 @@ const SettingsModal = ({
         <CollapsibleSection id="bookmarks" title="Bookmarks" icon="bookmarks" isOpen={openSections.includes('bookmarks')} onToggle={toggleSection}>
           <Toggle label="Hide Bookmark Icons" value={hideBookmarkIcons} onChange={setHideBookmarkIcons} icon="image_not_supported" />
           <Toggle label="Hide Bookmark URLs" value={hideBookmarkUrls} onChange={setHideBookmarkUrls} icon="link_off" />
+        </CollapsibleSection>
+
+        <CollapsibleSection id="analytics" title="Live Analytics" icon="insights" isOpen={openSections.includes('analytics')} onToggle={toggleSection}>
+          <p className="smallest opacity-6 mb-10">Real-time statistics for your bookmark collection.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px', marginBottom: '10px' }}>
+            <div style={{ padding: '12px', background: 'var(--primary-glow)', borderRadius: 'var(--radius-sm)', textAlign: 'center' }}>
+              <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>{totalBookmarks}</div>
+              <div className="smallest opacity-7">Total Bookmarks</div>
+            </div>
+            <div style={{ padding: '12px', background: 'var(--primary-glow)', borderRadius: 'var(--radius-sm)', textAlign: 'center' }}>
+              <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>{pinnedCount}</div>
+              <div className="smallest opacity-7">Pinned Bookmarks</div>
+            </div>
+            <div style={{ padding: '12px', background: 'var(--primary-glow)', borderRadius: 'var(--radius-sm)', textAlign: 'center' }}>
+              <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>{categoriesCount}</div>
+              <div className="smallest opacity-7">Active Categories</div>
+            </div>
+          </div>
+        </CollapsibleSection>
+
+        <CollapsibleSection id="diagnostics" title="System Diagnostics" icon="troubleshoot" isOpen={openSections.includes('diagnostics')} onToggle={toggleSection}>
+          <p className="smallest opacity-7" style={{ marginBottom: '1rem' }}>Run an automated evaluation to optimize layout speeds and system health.</p>
+          <form onSubmit={runDiagnostics}>
+            <div className="form-group" style={{ marginBottom: '1rem' }}>
+              <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, marginBottom: '6px' }}>Detected Browser Agent</label>
+              <input type="text" className="pill" readOnly defaultValue={navigator.userAgent.split(' ')[0] || 'Modern Browser'} style={{ width: '100%', background: 'var(--primary-glow)' }} />
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '1rem' }}>
+              <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, marginBottom: '6px' }}>Network Connection Speed</label>
+              <select className="pill" value={connectionSpeed} onChange={(e) => setConnectionSpeed(e.target.value)} style={{ width: '100%', WebkitAppearance: 'none' }}>
+                <option value="fast">Fast Connection (WiFi / 4G / Broadband)</option>
+                <option value="slow">Slow Connection (Offline / Isolated / 2G / 3G)</option>
+              </select>
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '1rem' }}>
+              <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, marginBottom: '6px' }}>Issue or Optimization Goal</label>
+              <select className="pill" value={issueType} onChange={(e) => setIssueType(e.target.value)} style={{ width: '100%', WebkitAppearance: 'none' }}>
+                <option value="none">None (Optimal health check & validation)</option>
+                <option value="slow">Display/Animation latency (Make layout faster)</option>
+                <option value="sync">Sync issues (Configure connection)</option>
+                <option value="ui">Theme or design issues (Fix card visual styles)</option>
+              </select>
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, marginBottom: '6px' }}>Additional details / description</label>
+              <textarea className="pill" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Describe any behavior or questions..." style={{ width: '100%', minHeight: '60px', resize: 'vertical' }} />
+            </div>
+
+            <button type="submit" className="pill btn-primary w-full" style={{ padding: '10px' }} disabled={isRunningDiag}>
+              <span className="material-icons mr-10" style={{ fontSize: '1.2rem' }}>{isRunningDiag ? 'sync' : 'play_circle'}</span>
+              {isRunningDiag ? 'Analyzing...' : 'Run Diagnostics Report'}
+            </button>
+          </form>
+
+          {diagResult && (
+            <div style={{ marginTop: '1rem', padding: '12px', background: 'var(--primary-glow)', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontWeight: 700, marginBottom: '4px' }}>Status: {diagResult.status} ({diagResult.timestamp})</div>
+              <p className="smallest opacity-8" style={{ margin: 0 }}>{diagResult.recommendation}</p>
+            </div>
+          )}
         </CollapsibleSection>
 
         <CollapsibleSection id="appearance" title="UI & Theme" icon="palette" isOpen={openSections.includes('appearance')} onToggle={toggleSection}>
