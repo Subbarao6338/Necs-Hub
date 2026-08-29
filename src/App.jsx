@@ -4,7 +4,6 @@ import Header from './components/Header';
 import TabBar from './components/TabBar';
 import Sidebar from './components/Sidebar';
 import BookmarksView from './components/BookmarksView';
-import ManualStatsView from './components/ManualStatsView';
 import SearchOverlay from './components/SearchOverlay';
 import SettingsModal from './components/SettingsModal';
 import BookmarkModal from './components/BookmarkModal';
@@ -384,9 +383,6 @@ function App() {
               showStats={showStats}
               openInNewTab={openInNewTab}
             />
-          )}
-          {currentTab === 'manual_stats' && (
-            <ManualStatsView />
           )}
         </div>
 

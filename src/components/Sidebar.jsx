@@ -89,14 +89,6 @@ const Sidebar = ({
         </button>
 
         <button
-          className={`sidebar-nav-item ${currentTab === 'manual_stats' ? 'active' : ''}`}
-          onClick={() => setTab('manual_stats')}
-        >
-          <span className="material-icons-outlined">insights</span>
-          <span className="sidebar-nav-label">Analytics</span>
-        </button>
-
-        <button
           className="sidebar-nav-item"
           onClick={onSettingsClick}
         >
