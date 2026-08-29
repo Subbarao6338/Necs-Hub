@@ -76,10 +76,24 @@ const BookmarkCard = memo(({ link, idx, openInNewTab, onPin, onLongPress, catego
       </div>
 
       <div className="card-footer">
-        <span className="fallback-badge" title={`This bookmark has ${link.urls?.length || 1} URL(s). Long-press to see all.`}>
-          <span className="material-icons">layers</span>
-          {link.urls?.length || 1}
-        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          {link.category && (
+            <a
+              href={`#${encodeURIComponent(link.category)}`}
+              className="category-tag-link"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              title={`View ${link.category} bookmarks`}
+            >
+              #{link.category}
+            </a>
+          )}
+          <span className="fallback-badge" title={`This bookmark has ${link.urls?.length || 1} URL(s). Long-press to see all.`}>
+            <span className="material-icons">layers</span>
+            {link.urls?.length || 1}
+          </span>
+        </div>
         <button className={`pin-btn ${link.is_pinned ? 'active' : ''}`} onClick={(e) => { e.stopPropagation(); onPin(link); }} title={link.is_pinned ? 'Unpin' : 'Pin to Top'}>
           <span className="material-icons">push_pin</span>
         </button>

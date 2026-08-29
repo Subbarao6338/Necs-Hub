@@ -44,6 +44,22 @@ const BookmarksView = ({ searchQuery, onEdit, onDelete, onPin, refreshTrigger, h
   const [collapsedCategories, setCollapsedCategories] = useState({});
 
   useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash && hash.length > 1) {
+        const cat = decodeURIComponent(hash.substring(1));
+        setActiveCategory(cat);
+      } else {
+        setActiveCategory('All');
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  useEffect(() => {
     setLoading(true);
 
     let storedLinks = storage.getJSON(`hub_links_necs`);

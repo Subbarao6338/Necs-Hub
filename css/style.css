@@ -433,6 +433,25 @@ body {
   white-space: nowrap;
 }
 
+.category-tag-link {
+  background: var(--surface-solid);
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.category-tag-link:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+}
+
 .fallback-badge .material-icons {
   font-size: 0.9rem !important;
 }

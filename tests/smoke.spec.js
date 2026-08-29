@@ -19,3 +19,16 @@ test('can open settings modal', async ({ page }) => {
   // Verify settings modal is open
   await expect(page.locator('.modal h2')).toContainText('Settings');
 });
+
+test('filters bookmarks via category hash navigation', async ({ page }) => {
+  await page.goto('http://localhost:5173/#Streaming');
+  // Check that Streaming category is active and shown
+  await expect(page.locator('.main-category-nav .pill.active')).toContainText('Streaming');
+  await expect(page.locator('.category-title')).toContainText('Streaming');
+
+  // Test category link click on a bookmark card tag
+  await page.goto('http://localhost:5173/#All');
+  const catLink = page.locator('a.category-tag-link[href="#Streaming"]').first();
+  await catLink.click();
+  await expect(page.locator('.main-category-nav .pill.active')).toContainText('Streaming');
+});
